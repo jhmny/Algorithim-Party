@@ -38,9 +38,9 @@ int main()
 	//cout << "Replacing int List" << endl;
 	//demoList.read("replace.txt");
 	//demoList.write();
-	//string fileName2 = "example2.txt";
-	//List<string> demoListString(demoSize,fileName2);
-	//demoListString.write();
+	string fileName2 = "example2.txt";
+	List<string> demoListString(demoSize,fileName2);
+	demoListString.write();
 
 	cout << "Printing Inherited Class" << endl;
 	Int_List demoIntList(demoSize, fileName);

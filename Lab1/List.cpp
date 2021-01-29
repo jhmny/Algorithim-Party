@@ -14,8 +14,16 @@ List<T>::List(int inputSize, std::string name) {
 		std::cout << "No fin found: " << std::endl;
 	}
 	else {
-		for (int i = 0; i < size; i++) {
-			fin >> array[i];	
+		if (typeid(array[0]) == typeid(std::string)) {
+			for (int i = 0; i < size; i++) {
+				std::getline(&fin, array[i]);
+			}
+			
+		}
+		else {
+			for (int i = 0; i < size; i++) {
+				fin >> array[i];
+			}
 		}
 		fin.close();
 	}
@@ -39,9 +47,16 @@ void List<T>::read(std::string name) {
 		std::cout << "No fin found: " << std::endl;
 	}
 	else {
-		for (int i = 0; i < size; i++) {
-			fin >> array[i];
+		if (T == std::string) {
+			//std::cout << "yahoo " << std::endl;
+			//fin& std::getline(array, size);
 		}
+		else {
+			for (int i = 0; i < size; i++) {
+				fin >> array[i];
+			}
+		}
+		
 		fin.close();
 	}
 };
