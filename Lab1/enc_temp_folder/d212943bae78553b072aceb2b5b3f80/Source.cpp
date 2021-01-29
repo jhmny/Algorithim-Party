@@ -33,7 +33,7 @@ int main()
 	//string fileName = "generatedList.txt";
 	string fileName = "example.txt";
 	List<int> demoList(demoSize,fileName);
-		demoList.write();
+	demoList.write();
 
 	//cout << "Replacing int List" << endl;
 	//demoList.read("replace.txt");

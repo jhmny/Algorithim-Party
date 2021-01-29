@@ -14,11 +14,11 @@ List<T>::List(int inputSize, std::string name) {
 		std::cout << "No fin found: " << std::endl;
 	}
 	else {
+		while(fin)
 		if (typeid(array[0]) == typeid(std::string)) {
 			for (int i = 0; i < size; i++) {
-				std::getline(&fin, array[i]);
+				fin >> array[i];
 			}
-			
 		}
 		else {
 			for (int i = 0; i < size; i++) {
@@ -38,7 +38,6 @@ List<T>::~List()
 template<class T>
 void List<T>::read(std::string name) {
 	destory();
-	T* array = new T[size];
 	std::ifstream fin;
 	int count = 0;
 	count = 0;
@@ -56,7 +55,6 @@ void List<T>::read(std::string name) {
 				fin >> array[i];
 			}
 		}
-		
 		fin.close();
 	}
 };
