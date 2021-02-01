@@ -16,7 +16,7 @@ int main()
 {
 	vector<int> randNums;
 	int N;
-	N = 8000;
+	N = 50;
 	cout << "====================================" << endl;
 	cout << "Generating Random List of: " << N * 2 << endl;
 	int NN = N * -1;
@@ -71,8 +71,8 @@ int main()
 	cout << "Using Brute" << endl;
 	demoIntList.sum3_brute_force();
 
-	//cout << "Using BS" << endl;
-	//demoIntList.sum3_bin_search();
+	cout << "Using BS" << endl;
+	demoIntList.sum3_bin_search();
 
 	cout << "====================================" << endl;
 
