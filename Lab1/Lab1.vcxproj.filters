@@ -40,10 +40,13 @@
     <Text Include="example2.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="replace.txt">
+      <Filter>Source Files</Filter>
+    </Text>
     <Text Include="generatedList.txt">
       <Filter>Source Files</Filter>
     </Text>
-    <Text Include="replace.txt">
+    <Text Include="newStrings.txt">
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>
