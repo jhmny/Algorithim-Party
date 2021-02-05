@@ -35,7 +35,8 @@ int main() {
 	N_Puzzle testPuzzle;
 	testPuzzle.read("generatedList.txt");
 	testPuzzle.writeInitial();
-
+	testPuzzle.writeTarget();
+	testPuzzle.solve();
 
 	
 }

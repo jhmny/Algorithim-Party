@@ -9,7 +9,7 @@ private:
 	std::list<int> initial;
 	std::list<int> goal;
 	std::list<int> solution;
-	void isSolvable();
+	bool isSolvable();
 	void bestFirst();
 public:
 	N_Puzzle() {}; //constructor
