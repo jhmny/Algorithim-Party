@@ -25,6 +25,8 @@ void N_Puzzle::read(std::string inputfile)
 		{
 			int x;
 			fin >> x;
+			if (x == -1)
+				break;
 			if (x == 0) {
 				initial.push_back(NULL);
 			}

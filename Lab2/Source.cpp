@@ -26,7 +26,9 @@ int main() {
 
 	for (int i = 0; i < randNums.size(); i++) {
 		file << randNums.at(i) << endl;
+
 	}
+	file << -1 << endl;
 	cout << "generatedList Done" << endl;
 	cout << "====================================" << endl;
 
