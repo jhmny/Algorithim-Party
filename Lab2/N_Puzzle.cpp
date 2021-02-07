@@ -4,21 +4,32 @@
 
 using namespace std;
 bool N_Puzzle::isSolvable()
-
 {
 	//inversion
 	int size = 0;
 	int inversion = 0;
 	size = sqrt(initial.size());
 	//vector<vector <int>> solvable;
-	for(list<int>::iterator i = initial.begin(); i != initial.end(); ++i) { //iterator i does not break
-		for (list<int>::iterator j = ++i; j != initial.end(); ++j) {
-			if (*i < *j) {
+	for(list<int>::iterator it = initial.begin(); it != initial.end(); ++it) { //i goes out of bounds,
+		for (list<int>::iterator j = ++it; j != initial.end(); ++j) {
+			if (*it < *j) {
 				inversion++;
 			}
 		}
+		if (it == initial.end()) //fixes the problem of iteration by check if we are at the end
+			break;
 	}
 	cout << inversion << endl;
+	//odd checker
+
+	if (size % 2 == 1) { // is odd
+		if (inversion % 2 == 1) { //inversion are also odd
+			return 0;
+		}
+	}
+	else { //do something here
+
+	}
 	return 0;
 }
 
@@ -54,9 +65,10 @@ void N_Puzzle::read(std::string inputfile)
 
 void N_Puzzle::writeInitial()
 {
-	for (std::list<int>::iterator i = initial.begin(); i != initial.end(); ++i) {
+	/*for (std::list<int>::iterator i = initial.begin(); i != initial.end(); ++i) {
 		cout << " " << *i;
-	}
+	}*/
+
 	cout << endl;
 	int size = 0;
 	size = sqrt(initial.size());
@@ -77,9 +89,9 @@ void N_Puzzle::writeInitial()
 
 void N_Puzzle::writeTarget()
 {
-	for (std::list<int>::iterator i = goal.begin(); i != goal.end(); ++i) {
+	/*for (std::list<int>::iterator i = goal.begin(); i != goal.end(); ++i) {
 		cout << " " << *i;
-	}
+	}*/
 	cout << endl;
 	int size = 0;
 	size = sqrt(goal.size());
